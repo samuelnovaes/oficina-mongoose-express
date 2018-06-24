@@ -11,7 +11,7 @@ th, td {
 	vertical-align: top;
 }
 
-input, textarea {
+dialog input, dialog textarea {
 	box-sizing: border-box;
-	width: 200px;
+	width: 100%;
 }

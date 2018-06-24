@@ -24,7 +24,7 @@ const vm = new Vue({
 		refresh(search) {
 			axios.get(`/api/livros`, {
 				params: {
-					titulo: search
+					busca: search
 				}
 			}).then(response => {
 				this.livros = response.data

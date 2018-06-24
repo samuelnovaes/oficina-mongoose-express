@@ -2,7 +2,12 @@ const router = require('express').Router()
 const Livros = require('../models/livros')
 
 router.get('/', (req, res) => {
-	Livros.find({ titulo: new RegExp(req.query.titulo, 'i') }).sort({ _id: -1 }).exec((err, livros) => {
+	const busca = new RegExp(req.query.busca, 'i')
+	Livros.find().or([
+		{ titulo: busca },
+		{ autor: busca },
+		{ descricao: busca }
+	]).sort({ _id: -1 }).exec((err, livros) => {
 		if (err) res.status(500).send(err.message)
 		else res.json(livros)
 	})
