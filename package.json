@@ -1,5 +1,5 @@
 {
-	"name": "livros",
+	"name": "oficina-mongoose-express",
 	"version": "1.0.0",
 	"description": "Oficina de Mongoose e Express",
 	"main": "index.js",
