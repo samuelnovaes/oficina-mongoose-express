@@ -18,9 +18,8 @@
 				<label for="busca">Buscar:</label>
 				<br>
 				<input type="text" v-model="busca" id="busca">
+				<span v-if="loading">Carregando...</span>
 			</p>
-
-			<p v-if="loading">Carregando...</p>
 
 			<table cellpadding="5" border="1">
 				<tr>
