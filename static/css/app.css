@@ -1,0 +1,17 @@
+* {
+	font-family: Arial, Verdana, Sans-Serif;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: left;
+	vertical-align: top;
+}
+
+input, textarea {
+	box-sizing: border-box;
+	width: 200px;
+}
