@@ -1,13 +1,13 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const routerfy = require('routerfy')
 const app = express()
-const router = express.Router()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('static'))
-app.use('/api', router)
+app.use('/api', routerfy('routes'))
 
 mongoose.connect('mongodb://teste:teste123@ds217131.mlab.com:17131/books-app')
 const db = mongoose.connection
@@ -21,5 +21,3 @@ db.on('open', () => {
 		console.log('Servidor rodando na porta 8080')
 	})
 })
-
-router.use('/livros', require('./routes/livros'))
