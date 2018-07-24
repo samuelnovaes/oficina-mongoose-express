@@ -41,4 +41,4 @@ router.delete('/:id', (req, res) => {
 	})
 })
 
-exports._router = router
+module.exports = router
